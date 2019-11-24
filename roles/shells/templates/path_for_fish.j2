@@ -1,0 +1,6 @@
+{% for block in __ENV if block.in_path %}
+set {{block.key}} {{block.value}}
+{% endfor %}
+
+set PATH {% for block in __ENV if block.in_path %}${{block.key}}/{{ block.exec_folder }} {% endfor %} $PATH
+

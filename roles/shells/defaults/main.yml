@@ -1,0 +1,73 @@
+---
+
+envAnaconda:
+  -
+    key: ANACONDA_HOME
+    value: ~/anaconda3
+    exec_folder: bin
+    in_path: true
+
+envJava:
+  -
+    key: JAVA_HOME
+    value: ~/.sdkman/candidates/java/current
+    exec_folder: bin
+    in_path: true
+
+envSpark:
+  -
+    key: SPARK_HOME
+    value: ~/.sdkman/candidates/spark/current
+    exec_folder: bin
+    in_path: true
+
+envScala:
+  -
+    key: SCALA_HOME
+    value: ~/.sdkman/candidates/scala/current
+    exec_folder: bin
+    in_path: true
+
+envMaven:
+  -
+    key: MAVEN_HOME
+    value: ~/.sdkman/candidates/maven/current
+    exec_folder: bin
+    in_path: true
+
+envSBT:
+  -
+    key: SBT_HOME
+    value: ~/.sdkman/candidates/sbt/current
+    exec_folder: bin
+    in_path: true
+
+envSBT_CREDENTIALS:
+  -
+    key: SBT_CREDENTIALS
+    value: ~/.sbt/.credentials
+    in_path: false
+
+envYARN:
+  -
+    key: YARN_HOME
+    value: ~/.yarn
+    exec_folder: bin
+    in_path: true
+
+envYARN_GLOBAL:
+  -
+    key: YARN_GLOBAL_HOME
+    value: ~/.yarn/global/node_modules
+    exec_folder: bin
+    in_path: true
+
+envNODE:
+  -
+    key: NODE_HOME
+    value: ~/opt/node-v10.16.3-linux-x64
+    exec_folder: bin
+    in_path: true
+
+
+

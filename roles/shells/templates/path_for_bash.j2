@@ -1,0 +1,5 @@
+{% for block in __ENV if block.in_path %}
+export {{block.key}}={{block.value}}
+{% endfor %}
+
+export PATH={% for block in __ENV if block.in_path %}${{block.key}}/{{ block.exec_folder }}:{% endfor %}$PATH

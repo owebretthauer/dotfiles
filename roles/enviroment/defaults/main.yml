@@ -1,0 +1,13 @@
+---
+
+__ENV: []
+#  -
+#    key: LOCAL_BIN_HOME
+#    value: ~/.bin
+#    exec_folder: .
+#    in_path: true
+
+__ALIAS: []
+#   -
+#     key: ll
+#     value: ls -lhtr
