@@ -1,0 +1,2 @@
+#!/bin/sh
+tee $HOME/log-in.txt | start-dotty-ide 2> $HOME/log-err.txt | tee $HOME/log-out.txt

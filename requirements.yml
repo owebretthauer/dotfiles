@@ -1,0 +1,3 @@
+- src: https://github.com/owebretthauer/ansible-role-i3wm
+  version: master
+  name: i3wm

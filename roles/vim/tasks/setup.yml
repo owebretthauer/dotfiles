@@ -1,0 +1,42 @@
+---
+
+# setup
+- name: vim - setFact vim src folder
+  set_fact:
+    vimSrcFolder: "{{ role_path }}/files/vim/"
+
+- name: vim - setFact vim target folder
+  set_fact:
+    vimTargetFolder: "~/.vim"
+
+- name: vim - setFact nvim target folder
+  set_fact:
+    nvimTargetFolder: "~/.config/nvim"
+
+# copy files
+- name: vim - copy vim src folder
+  copy:
+    src: "{{  vimSrcFolder }}"
+    dest: "{{ vimTargetFolder }}"
+
+- name: vim - copy nvim src folder
+  copy:
+    src: "{{  vimSrcFolder }}"
+    dest: "{{ nvimTargetFolder }}"
+
+- name: vim - copy bin src folder
+  copy:
+    src: "{{role_path }}/files/bin/"
+    dest: "~/bin"
+
+# symbolic links
+- name: vim - symbolic link .vimrc
+  file:
+    src: "{{ vimTargetFolder }}/init.vim"
+    dest: ~/.vimrc
+    state: link
+
+# install plugins
+- name: vim - install vim plugins
+  shell:
+    cmd: "vim -E -s -u ~/.config/nvim/init.vim +PlugInstall +qall"

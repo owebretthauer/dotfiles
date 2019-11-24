@@ -1,0 +1,8 @@
+---
+
+- name: vim - install packages
+  apt:
+    pkg:
+    - vim
+    - neovim
+  become: true

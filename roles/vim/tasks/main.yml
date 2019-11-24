@@ -1,0 +1,7 @@
+---
+
+- name: vim - install dependencies
+  import_tasks: install.yml
+
+- name: vim - setup
+  import_tasks: setup.yml
