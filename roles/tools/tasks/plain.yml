@@ -1,0 +1,29 @@
+---
+# setup
+- name: tools - define plain_repos
+  set_fact:
+    plain_repos: "{{ __plain_repos | list }}"
+  when: plain_repos is not defined
+  tags:
+    - env
+
+- name: tools - define plain_repos
+  set_fact:
+    plain_repos: "{{ __plain_repos | list + plain_repos | list }}"
+  when: plain_repos is defined
+  tags:
+    - env
+
+- name: tools - define plain_repos
+  set_fact:
+    plain_repos: "{{ __plain_repos| list + plain_repos| list }}"
+
+# clone repositories
+- name: tools - clone plain tools and lists
+  git:
+    repo: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    force: yes
+    update: yes
+    depth: 1
+  with_items: "{{ plain_repos }}"

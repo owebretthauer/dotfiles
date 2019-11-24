@@ -1,0 +1,18 @@
+---
+# plain tools
+- name: tools - plain tools and lists
+  import_tasks: plain.yml
+  tags:
+    - plain
+
+# Rust Lang
+- name: tools - rust lang tools
+  import_tasks: rust.yml
+  tags:
+    - rustlang
+
+#  GO Lang
+- name: tools - go lang tools
+  import_tasks: go.yml
+  tags:
+    - golang

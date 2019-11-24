@@ -1,0 +1,45 @@
+---
+# setup
+- name: tools - define golang_repos
+  set_fact:
+    golang_repos: "{{ __golang_repos | list }}"
+  when: golang_repos is not defined
+  tags:
+    - env
+
+- name: tools - define golang_repos
+  set_fact:
+    golang_repos: "{{ __golang_repos | list + golang_repos | list }}"
+  when: golang_repos is defined
+  tags:
+    - env
+
+- name: tools - register go home enviroment
+  set_fact:
+      __ENV: "{{ __ENV | list + envGo | list }}"
+  tags:
+    - env
+
+# clone repositories
+- name: tools - clone golang tools
+  git:
+    repo: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    force: yes
+    update: yes
+    depth: 1
+  with_items: "{{ golang_repos }}"
+
+# build
+- name: tools - compile golang tools
+  shell: go get && go build
+  args:
+    chdir: "{{ item.dest }}"
+  with_items: "{{ golang_repos }}"
+
+# install
+- name: tools - install golang tools
+  shell: "go install"
+  args:
+    chdir: "{{ item.dest }}"
+  with_items: "{{ golang_repos }}"

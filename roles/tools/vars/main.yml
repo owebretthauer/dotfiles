@@ -1,0 +1,73 @@
+---
+
+__plain_repos:
+  -
+    url: https://github.com/danielmiessler/SecLists.git
+    dest: "{{ plain_repos_src_path }}/SecLists"
+  -
+    url: https://github.com/DominicBreuker/pspy.git
+    dest: "{{ plain_repos_src_path }}/pspy/"
+  -
+    url: https://github.com/swisskyrepo/PayloadsAllTheThings.git
+    dest: "{{ plain_repos_src_path }}/PayloadsAllTheThings"
+  -
+    url: https://github.com/7ioSecurity/XSS-Payloads.git
+    dest: "{{ plain_repos_src_path }}/XSS-Payloads"
+  -
+    url: https://github.com/h0nus/QRGen
+    dest: "{{ plain_repos_src_path }}/QRGen"
+  -
+    url: https://github.com/GTFOBins/GTFOBins.github.io.git
+    dest: "{{ plain_repos_src_path }}/gtfobins"
+  -
+    url: https://github.com/LOLBAS-Project/LOLBAS.git
+    dest: "{{ plain_repos_src_path }}/lolbas"
+  -
+    url: https://github.com/thelinuxchoice/blackeye.git
+    dest: "{{ plain_repos_src_path }}/blackeye"
+  -
+    url: https://github.com/rebootuser/LinEnum.git
+    dest: "{{ plain_repos_src_path }}/LinEnum"
+  -
+    url: https://github.com/InteliSecureLabs/Linux_Exploit_Suggester.git
+    dest: "{{ plain_repos_src_path }}/Linux_Exploit_Suggester"
+  -
+    url: https://github.com/fuzzdb-project/fuzzdb.git
+    dest: "{{ plain_repos_src_path }}/fuzzdb"
+  -
+    url: https://github.com/offensive-security/exploitdb.git
+    dest: "{{ plain_repos_src_path }}/exploitdb"
+
+__rustlang_repos:
+  -
+    url: https://github.com/sharkdp/bat.git
+    dest: "{{ rust_src_path}}/bat"
+  -
+    url: https://github.com/sharkdp/fd.git
+    dest: "{{ rust_src_path}}/fd"
+  -
+    url: https://github.com/BurntSushi/xsv.git
+    dest: "{{ rust_src_path}}/xsv"
+
+__golang_repos:
+  -
+    url: https://github.com/OJ/gobuster.git
+    dest: "{{ go_src_path}}/gobuster"
+  -
+    url: https://github.com/tomnomnom/gron.git
+    dest: "{{ go_src_path}}/gron"
+  -
+    url: https://github.com/tomnomnom/meg.git
+    dest: "{{ go_src_path}}/meg"
+  -
+    url: https://github.com/tomnomnom/httprobe.git
+    dest: "{{ go_src_path}}/httprobe"
+  -
+    url: https://github.com/tomnomnom/assetfinder.git
+    dest: "{{ go_src_path}}/assetfinder"
+  -
+    url: https://github.com/tomnomnom/unfurl.git
+    dest: "{{ go_src_path}}/unfurl"
+  -
+    url: https://github.com/tomnomnom/gf.git
+    dest: "{{ go_src_path}}/gf"

@@ -4,4 +4,6 @@
   roles:
    - { role: enviroment, tags: env }
    - { role: vim, tags: vim }
+   - { role: tools, tags: tools }
+   - { role: i3wm, tags: i3 }
    - { role: shells, tags: shell }

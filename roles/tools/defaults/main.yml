@@ -1,0 +1,38 @@
+---
+
+# Plain tools
+plain_repos_src_path: ~/opt/tools
+
+#plain_repos: []
+# -
+#   url: https://github.com/exmaple/repo.git
+#   dest: "{{ plain_repos_src_path }}/repo"
+
+# Rust Lang
+envRust:
+  -
+    key: CARGO_HOME
+    value: ~/.cargo
+    exec_folder: bin
+    in_path: true
+
+rust_src_path: "~/workspace/third/rust"
+
+#rustlang_repos: []
+# -
+#   url: https://github.com/example/repo.git
+#   dest: "{{ rust_src_path}}/repo"
+
+# GO Lang
+envGo:
+  -
+    key: GOPATH
+    value: ~/go
+    exec_folder: bin
+    in_path: true
+go_src_path: "{{ envGo[0].value }}/src"
+
+golang_repos: []
+# -
+#   url: https://github.com/example/repo.git
+#   dest: "{{ go_src_path}}/repo"

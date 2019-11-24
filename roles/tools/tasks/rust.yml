@@ -1,0 +1,46 @@
+---
+#setup
+- name: tools - define rustlang_repos
+  set_fact:
+    rustlang_repos: "{{ __rustlang_repos | list }}"
+  when: rustlang_repos is not defined
+  tags:
+    - env
+
+- name: tools - define rustlang_repos
+  set_fact:
+    rustlang_repos: "{{ __rustlang_repos | list + rustlang_repos | list }}"
+  when: rustlang_repos is defined
+  tags:
+    - env
+
+- name: tools - register rust home enviroment
+  set_fact:
+      __ENV: "{{ __ENV | list + envRust | list }}"
+  tags:
+    - env
+
+# clone repositories
+- name: tools - clone rust tools
+  git:
+    repo: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    force: yes
+    update: yes
+    depth: 1
+  with_items: "{{ rustlang_repos}}"
+
+# build
+- name: tools - build rust tools
+  shell: cargo build
+  args:
+    chdir: "{{ item.dest }}"
+  with_items: "{{ rustlang_repos }}"
+
+# install
+- name: tools - install rust tools
+  shell: "cargo install --force --path ."
+  args:
+    chdir: "{{ item.dest }}"
+  with_items: "{{ rustlang_repos }}"
+
