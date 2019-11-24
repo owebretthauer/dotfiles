@@ -1,60 +1,65 @@
 ---
-- name: register anaconda home
+
+- name: shell - copy bin src folder
+  copy:
+    src: "{{role_path }}/files/fish/"
+    dest: "~/.config/fish"
+
+- name: shell - register anaconda home
   set_fact:
       __ENV: "{{ __ENV | list + envAnaconda | list }}"
   tags:
     - env
 
-- name: register java home
+- name: shell - register java home
   set_fact:
       __ENV: "{{ __ENV | list + envJava | list }}"
   tags:
     - env
 
-- name: register spark home
+- name: shell - register spark home
   set_fact:
       __ENV: "{{ __ENV | list + envSpark | list }}"
   tags:
     - env
 
-- name: register scala home
+- name: shell - register scala home
   set_fact:
       __ENV: "{{ __ENV | list + envScala | list }}"
   tags:
     - env
 
-- name: register maven home
+- name: shell - register maven home
   set_fact:
       __ENV: "{{ __ENV | list + envMaven | list }}"
   tags:
     - env
-    - shell
 
-- name: register sbt home
+- name: shell - register sbt home
   set_fact:
       __ENV: "{{ __ENV | list + envSBT | list }}"
   tags:
     - env
 
-- name: register sbt credentials
+- name: shell - register sbt credentials
   set_fact:
       __ENV: "{{ __ENV | list + envSBT_CREDENTIALS | list }}"
   tags:
     - env
 
-- name: register yarn home
+- name: shell - register yarn home
   set_fact:
       __ENV: "{{ __ENV | list + envYARN | list }}"
   tags:
     - env
 
-- name: register yarn global
+- name: shell - register yarn global
   set_fact:
       __ENV: "{{ __ENV | list + envYARN_GLOBAL | list }}"
   tags:
     - env
 
-- name: register node home
+- name: shell - register node home
   set_fact:
       __ENV: "{{ __ENV | list + envNODE | list }}"
   tags:

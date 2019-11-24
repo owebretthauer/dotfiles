@@ -26,8 +26,11 @@
 
 - name: vim - copy bin src folder
   copy:
-    src: "{{role_path }}/files/bin/"
-    dest: "~/bin"
+    src: "{{role_path }}/files/bin/{{ item }}"
+    dest: "~/bin/{{ item }}"
+  with_items:
+    - start-dotty-ide
+    - start-dotty-ide-debug
 
 # symbolic links
 - name: vim - symbolic link .vimrc
