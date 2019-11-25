@@ -24,6 +24,11 @@
     src: "{{  vimSrcFolder }}"
     dest: "{{ nvimTargetFolder }}"
 
+- name: vim - create ~bin folder if it does not exist
+  file:
+    path: ~/bin
+    state: directory
+
 - name: vim - copy bin src folder
   copy:
     src: "{{role_path }}/files/bin/{{ item }}"

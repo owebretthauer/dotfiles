@@ -1,4 +1,11 @@
 ---
+# install golang
+- name: tools - install packages
+  apt:
+    name:
+    - golang
+  become: true
+
 # setup
 - name: tools - define golang_repos
   set_fact:

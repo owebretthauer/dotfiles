@@ -1,5 +1,20 @@
 ---
 
+- name: shell - install packages
+  apt:
+    name:
+    - bash
+    - fish
+  become: true
+
+- name: shell - determine shell executable location
+  command: which fish
+  register: fish
+
+- name: shell - change default shell
+  user: name="{{ ansible_user }}" shell="{{ fish.stdout }}"
+  become: yes
+
 - name: shell - copy bin src folder
   copy:
     src: "{{role_path }}/files/fish/"

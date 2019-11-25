@@ -1,4 +1,13 @@
 ---
+# install rustlang
+
+- name: tools - install packages
+  apt:
+    name:
+    - rustc
+    - clang
+  become: true
+
 #setup
 - name: tools - define rustlang_repos
   set_fact:
@@ -43,4 +52,3 @@
   args:
     chdir: "{{ item.dest }}"
   with_items: "{{ rustlang_repos }}"
-

@@ -2,7 +2,7 @@
 
 - name: vim - install packages
   apt:
-    pkg:
+    name:
     - vim
     - neovim
   become: true
