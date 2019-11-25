@@ -1,0 +1,61 @@
+---
+
+- name: shell - register anaconda home
+  set_fact:
+      __ENV: "{{ __ENV | list + envAnaconda | list }}"
+  tags:
+    - env
+
+- name: shell - register java home
+  set_fact:
+      __ENV: "{{ __ENV | list + envJava | list }}"
+  tags:
+    - env
+
+- name: shell - register spark home
+  set_fact:
+      __ENV: "{{ __ENV | list + envSpark | list }}"
+  tags:
+    - env
+
+- name: shell - register scala home
+  set_fact:
+      __ENV: "{{ __ENV | list + envScala | list }}"
+  tags:
+    - env
+
+- name: shell - register maven home
+  set_fact:
+      __ENV: "{{ __ENV | list + envMaven | list }}"
+  tags:
+    - env
+
+- name: shell - register sbt home
+  set_fact:
+      __ENV: "{{ __ENV | list + envSBT | list }}"
+  tags:
+    - env
+
+- name: shell - register sbt credentials
+  set_fact:
+      __ENV: "{{ __ENV | list + envSBT_CREDENTIALS | list }}"
+  tags:
+    - env
+
+- name: shell - register yarn home
+  set_fact:
+      __ENV: "{{ __ENV | list + envYARN | list }}"
+  tags:
+    - env
+
+- name: shell - register yarn global
+  set_fact:
+      __ENV: "{{ __ENV | list + envYARN_GLOBAL | list }}"
+  tags:
+    - env
+
+- name: shell - register node home
+  set_fact:
+      __ENV: "{{ __ENV | list + envNODE | list }}"
+  tags:
+    - env
