@@ -1,0 +1,30 @@
+---
+__appearance_foreground: "#F8F8F2"
+__appearance_background: "#282A36"
+__appearance_cursor:  
+
+### color palette for terminals (urxvt, xfce-terminal, gnome-terminal, terminator) ###
+# black
+__appearance_color0:     "#000000"
+__appearance_color8:     "#4D4D4D"
+# red
+__appearance_color1:     "#FF5555"
+__appearance_color9:     "#FF6E67"
+# green
+__appearance_color2:     "#50FA7B"
+__appearance_color10:    "#5AF78E"
+# yellow
+__appearance_color3:     "#F1FA8C"
+__appearance_color11:    "#F4F99D"
+# blue
+__appearance_color4:     "#BD93F9"
+__appearance_color12:    "#CAA9FA"
+# magenta
+__appearance_color5:     "#FF79C6"
+__appearance_color13:    "#FF92D0"
+# cyan
+__appearance_color6:     "#8BE9FD"
+__appearance_color14:    "#9AEDFE"
+#white
+__appearance_color7:     "#BFBFBF"
+__appearance_color15:    "#E6E6E6"

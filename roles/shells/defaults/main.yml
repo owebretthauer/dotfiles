@@ -1,5 +1,12 @@
 ---
 
+envHomeBin:
+  -
+    key: BIN_HOME
+    value: ~/bin
+    exec_folder: .
+    in_path: true
+
 envAnaconda:
   -
     key: ANACONDA_HOME

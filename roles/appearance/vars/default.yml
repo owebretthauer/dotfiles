@@ -1,0 +1,29 @@
+---
+__appearance_foreground: "#00cc00"
+__appearance_background: "#2A2D2E"
+__appearance_cursor: "#a8a19f"
+
+# black
+__appearance_color0: "#000000"
+__appearance_color8: "#555555"
+# red
+__appearance_color1: "#AA0000"
+__appearance_color9: "#FF5555"
+# green
+__appearance_color2: "#00AA00"
+__appearance_color10: "#55FF55"
+# yellow
+__appearance_color3: "#AA5500"
+__appearance_color11: "#FFFF55"
+# blue
+__appearance_color4: "#0000AA"
+__appearance_color12: "#5555FF"
+# magenta
+__appearance_color5: "#AA00AA"
+__appearance_color13: "#FF55FF"
+# cyan
+__appearance_color6: "#00AAAA"
+__appearance_color14: "#55FFFF"
+# white
+__appearance_color7: "#AAAAAA"
+__appearance_color15: "#FFFFFF"

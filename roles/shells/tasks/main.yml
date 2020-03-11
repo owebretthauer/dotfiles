@@ -36,9 +36,8 @@
     - env
 
 - name: shells - add ansible manage block in fish.config
-  blockinfile:
-    path: ~/.config/fish/config.fish
-    marker: "######### {mark} Ansible Manages Blocks #########"
-    block: "{{ lookup('template', './fish.j2') }}"
+  template:
+    src: fish.j2
+    dest: ~/.config/fish/config.fish
   tags:
     - env

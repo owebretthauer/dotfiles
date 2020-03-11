@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'ryanoasis/vim-devicons'
 Plug 'sukima/xmledit'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

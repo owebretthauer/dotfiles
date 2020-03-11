@@ -1,0 +1,45 @@
+---
+
+appearance_style: default
+
+appearance_transparency: 20
+
+# general
+history: 10000
+# appearance
+
+color_theme: "default"
+
+# font
+appearance_font: "{{ __appearance_font }}"
+appearance_font_size_base: "{{ __appearance_font_size_base }}"
+
+# color general
+appearance_foreground: "{{ __appearance_foreground }}"
+appearance_background: "{{ __appearance_background }}"
+appearance_cursor: "{{ __appearance_cursor }}"
+
+# black
+appearance_color0: "{{ __appearance_color0 }}"
+appearance_color8: "{{ __appearance_color8 }}"
+# red
+appearance_color1: "{{ __appearance_color1 }}"
+appearance_color9: "{{ __appearance_color9 }}"
+# green
+appearance_color2: "{{ __appearance_color2 }}"
+appearance_color10: "{{ __appearance_color10 }}"
+# yellow
+appearance_color3: "{{ __appearance_color3 }}"
+appearance_color11: "{{ __appearance_color11 }}"
+# blue
+appearance_color4: "{{ __appearance_color4 }}"
+appearance_color12: "{{ __appearance_color12 }}"
+# magenta
+appearance_color5: "{{ __appearance_color5 }}"
+appearance_color13: "{{ __appearance_color13 }}"
+# cyan
+appearance_color6: "{{ __appearance_color6 }}"
+appearance_color14: "{{ __appearance_color14 }}"
+# white
+appearance_color7: "{{ __appearance_color7 }}"
+appearance_color15: "{{ __appearance_color15 }}"

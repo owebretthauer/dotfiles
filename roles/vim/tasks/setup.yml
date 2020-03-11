@@ -48,3 +48,8 @@
 - name: vim - install vim plugins
   shell:
     cmd: "vim -E -s -u ~/.config/nvim/init.vim +PlugInstall +qall"
+
+# coc - plugins
+- name: vim - install vim plugins
+  shell:
+    cmd: "vim -E -s -u ~/.config/nvim/init.vim +CocInstall coc-python coc-pyright coc-java coc-rls coc-phpls coc-tsserver +qall"

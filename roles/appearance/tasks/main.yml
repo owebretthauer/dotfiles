@@ -1,0 +1,14 @@
+---
+
+- name: load color palette by color_theme
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ color_theme }}.yml"
+    - "default.yml"
+
+- name: Xresources
+  template:
+    src: main.j2
+    dest: ~/.Xresources
+    mode: '0644'
+
