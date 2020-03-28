@@ -1,10 +1,15 @@
 - hosts: all
   gather_facts: yes
 
+  tasks:
+    - name: Install requirements
+      local_action: command ansible-galaxy install -r requirements.yml
+
   roles:
-    - { role: appearance , tags: appearance }
-    - { role: enviroment, tags: env }
-    - { role: vim, tags: vim }
+    - { role: requirements }
+    #- { role: appearance , tags: appearance }
+    #- { role: enviroment, tags: env }
+    #- { role: vim, tags: vim }
     #- { role: tools, tags: tools }
-    #- { role: i3wm, tags: i3 }
+    - { role: ansible-role-i3wm, tags: i3 }
     #- { role: shells, tags: shell }

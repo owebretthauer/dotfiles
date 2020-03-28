@@ -2,6 +2,7 @@
   gather_facts: yes
 
   roles:
+    - { role: requirements }
     - { role: appearance , tags: appearance }
     - { role: enviroment, tags: env }
     - { role: vim, tags: vim }

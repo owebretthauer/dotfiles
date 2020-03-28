@@ -1,3 +1,3 @@
-- src: https://github.com/owebretthauer/ansible-role-i3wm
+- src: git+https://github.com/owebretthauer/ansible-role-i3wm.git
   version: master
   name: i3wm
