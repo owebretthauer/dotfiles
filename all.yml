@@ -5,6 +5,6 @@
     - { role: appearance , tags: appearance }
     - { role: enviroment, tags: env }
     - { role: vim, tags: vim }
-    - { role: tools, tags: tools }
-    - { role: i3wm, tags: i3 }
-    - { role: shells, tags: shell }
+    #- { role: tools, tags: tools }
+    #- { role: i3wm, tags: i3 }
+    #- { role: shells, tags: shell }

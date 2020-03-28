@@ -1,0 +1,7 @@
+{% for key, value in ssh.hosts.items() %}
+Host {{ value.customer }}
+    HostName {{ key }}
+    User {{ value.ansible_user }}
+
+{% endfor %}
+

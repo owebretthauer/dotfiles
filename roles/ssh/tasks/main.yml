@@ -1,0 +1,10 @@
+---
+- name: include vars ssh_hosts
+  include_vars:
+    file: /tmp/ssh_hosts.json
+    name: ssh
+
+- name: create config file from template
+  blockinfile:
+    path: ~/.ssh/config
+    block: "{{ lookup('template', './config.j2') }}"

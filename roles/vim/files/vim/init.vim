@@ -7,6 +7,7 @@ set wildmenu
 " Bundle
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'ryanoasis/vim-devicons'
@@ -23,7 +24,21 @@ Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Lokaltog/vim-easymotion'
 Plug 'lervag/vimtex'
+Plug 'frazrepo/vim-rainbow'
 call plug#end()
+
+" vim-rainbow
+let g:rainbow_active = 1
+
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDAltDelims_java = 1
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDToggleCheckAllLines = 1
 
 " coc - language server support
 set updatetime=500
