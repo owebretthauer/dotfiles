@@ -7,9 +7,9 @@
 
   roles:
     - { role: requirements }
-    #- { role: appearance , tags: appearance }
-    #- { role: enviroment, tags: env }
-    #- { role: vim, tags: vim }
-    #- { role: tools, tags: tools }
+    - { role: appearance , tags: appearance }
+    - { role: enviroment, tags: env }
+    - { role: vim, tags: vim }
+    - { role: tools, tags: tools }
     - { role: ansible-role-i3wm, tags: i3 }
-    #- { role: shells, tags: shell }
+    - { role: shells, tags: shell }
