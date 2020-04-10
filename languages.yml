@@ -9,3 +9,4 @@
     - { role: requirements }
     - { role: enviroment, tags: env }
     - { role: go-lang, tags: tools }
+    - { role: rust-lang, tags: tools }
