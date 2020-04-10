@@ -4,9 +4,3 @@
   import_tasks: plain.yml
   tags:
     - plain
-
-# Rust Lang
-- name: tools - rust lang tools
-  import_tasks: rust.yml
-  tags:
-    - rustlang

@@ -4,3 +4,6 @@
 - src: git+file:///home/owe/workspace/private/ansible/go-lang.git
   version: master
   name: go-lang
+- src: git+file:///home/owe/workspace/private/ansible/rust-lang.git
+  version: master
+  name: rust-lang
