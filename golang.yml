@@ -1,0 +1,11 @@
+- hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Install requirements
+      local_action: command ansible-galaxy install -r requirements.yml
+
+  roles:
+    - { role: requirements }
+    - { role: enviroment, tags: env }
+    - { role: go-lang, tags: tools }

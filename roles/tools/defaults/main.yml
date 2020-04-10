@@ -22,17 +22,3 @@ rust_src_path: "~/workspace/third/rust"
 # -
 #   url: https://github.com/example/repo.git
 #   dest: "{{ rust_src_path}}/repo"
-
-# GO Lang
-envGo:
-  -
-    key: GOPATH
-    value: ~/go
-    exec_folder: bin
-    in_path: true
-go_src_path: "{{ envGo[0].value }}/src"
-
-golang_repos: []
-# -
-#   url: https://github.com/example/repo.git
-#   dest: "{{ go_src_path}}/repo"

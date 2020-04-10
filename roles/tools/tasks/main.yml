@@ -10,9 +10,3 @@
   import_tasks: rust.yml
   tags:
     - rustlang
-
-#  GO Lang
-- name: tools - go lang tools
-  import_tasks: go.yml
-  tags:
-    - golang
